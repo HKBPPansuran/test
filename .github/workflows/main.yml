@@ -6,20 +6,20 @@ jobs:
     runs-on: ubuntu-latest
     name: Directory Listings Index
     steps:
-      - name: Checkout Repository
+      - name: Checkout
         uses: actions/checkout@v4
         with:
-          ref: dummy-data    #checkout different branch
+          path: main    #checkout different branch
 
       - name: Github Pages Directory Listing
         uses: jayanta525/github-pages-directory-listing@v4.0.0
         with:
-          FOLDER: data      #directory to generate index
+          FOLDER: '.'      #directory to generate index
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: 'data'      # upload generated folder
+          path: '.'      # upload generated folder
   
   deploy:
     needs: pages-directory-listing
