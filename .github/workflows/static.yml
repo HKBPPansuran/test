@@ -32,12 +32,12 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
-#    name: Run Actions Template
+    name: Run Actions Template
     steps:
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          ref: ${{ github.event.pull_request.head.ref }}
+          ref: warta
 
       - name: Generate Directory Listings
         uses: jayanta525/github-pages-directory-listing@main
