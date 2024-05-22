@@ -21,9 +21,9 @@ concurrency:
   group: "pages"
   cancel-in-progress: false
 
-defaults:
-  run:
-    shell: bash
+#defaults:
+#  run:
+#    shell: bash
 
 jobs:
   # Single deploy job since we're just deploying
@@ -37,8 +37,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          submodules: recursive
-          fetch-depth: 0
+          ref: dummy-data
 
       - name: Generate Directory Listings
         uses: jayanta525/github-pages-directory-listing@main
