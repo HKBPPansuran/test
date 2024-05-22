@@ -32,7 +32,7 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
-    name: Run Actions Template
+#    name: Run Actions Template
     steps:
       - name: Checkout
         uses: actions/checkout@v4
