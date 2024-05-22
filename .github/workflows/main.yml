@@ -12,7 +12,7 @@ jobs:
           path: 'warta'    #checkout different branch
 
       - name: Github Pages Directory Listing
-        uses: jayanta525/github-pages-directory-listing@v4.0.0
+        uses: jayanta525/github-pages-directory-listing@main
         with:
           FOLDER: warta      #directory to generate index
 
