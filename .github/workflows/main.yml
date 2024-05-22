@@ -7,7 +7,7 @@ jobs:
     name: Directory Listings Index
     steps:
       - name: Checkout
-        uses: actions/checkout@lastest
+        uses: actions/checkout@v4
         with:
           path: 'warta'    #checkout different branch
 
@@ -17,7 +17,7 @@ jobs:
           FOLDER: data      #directory to generate index
 
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3.0.1
+        uses: actions/upload-pages-artifact@v3
         with:
           path: 'warta'      # upload generated folder
   
@@ -37,4 +37,4 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4.0.5
+        uses: actions/deploy-pages@v4
